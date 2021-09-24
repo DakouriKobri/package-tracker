@@ -1,5 +1,9 @@
+// NPM Packages
 import { useState, useEffect } from "react";
+
+// Local file
 import List from "./list";
+import Modal from "./components/Modal";
 
 export default function App() {
   const API_URL = `https://my.api.mockaroo.com/insta-orders.json?key=e49e6840`;
@@ -7,6 +11,7 @@ export default function App() {
   const [items, setitems] = useState([]);
   const [fetchError, setFetchError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [modal, setModal] = useState(null);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -31,7 +36,8 @@ export default function App() {
       <h1>My Package Tracker</h1>
       {isLoading && <p className="loading-message">Loading...</p>}
       {fetchError && <p className="error-message">{`Error: ${fetchError}`}</p>}
-      {!fetchError && !isLoading && <List items={items} />}
+      {!fetchError && !isLoading && <List items={items} setModal={setModal} />}
+      <Modal state={[modal, setModal]} />
     </div>
   );
 }
