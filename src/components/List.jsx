@@ -1,5 +1,5 @@
 // Local file
-import ListItem from "../listItem";
+import ListItem from "./ListItem";
 import ListItemModal from "../components/ListItemModal";
 
 export default function List({ items, setModal }) {

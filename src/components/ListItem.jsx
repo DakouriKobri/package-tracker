@@ -6,7 +6,7 @@ export default function ListItem({ item, onClick }) {
         <h3 className="item__parcel__id">{parcel_id} </h3>
         <p>{sender} </p>
         <p>{status} </p>
-        <p>{last_updated}</p>
+        <p>{new Date(`${last_updated}`).toUTCString()} </p>
       </div>
       <button className="button" onClick={onClick}>
         View

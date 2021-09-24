@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 
 // Local file
-import List from "./list";
+//import List from "./components/List";
+import ListScreen from "./listScreen";
 import Modal from "./components/Modal";
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
     const fetchItems = async () => {
       try {
         const response = await fetch(API_URL);
-        if (!response.ok) throw Error("Couldn't get this data");
+        if (!response.ok) throw Error("Couldn't get any data");
         const itemData = await response.json();
         setitems(itemData);
         setFetchError(null);
@@ -36,7 +37,9 @@ export default function App() {
       <h1>My Package Tracker</h1>
       {isLoading && <p className="loading-message">Loading...</p>}
       {fetchError && <p className="error-message">{`Error: ${fetchError}`}</p>}
-      {!fetchError && !isLoading && <List items={items} setModal={setModal} />}
+      {!fetchError && !isLoading && (
+        <ListScreen items={items} setModal={setModal} />
+      )}
       <Modal state={[modal, setModal]} />
     </div>
   );
