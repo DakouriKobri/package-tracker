@@ -1,11 +1,16 @@
 @import "../base/variables";
 
 .list-screen {
+  margin: 12px 5px;
   margin-top: 90px;
   background-color: $color-secondary;
 
   .welcome-view {
-    margin: 12px 5px;
+    @media (min-width: 600px) {
+      width: 600px;
+      margin: 12px auto;
+    }
+
     .welcome-view__message {
       color: $color-text;
     }
