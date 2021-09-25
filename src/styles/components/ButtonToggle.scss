@@ -1,0 +1,18 @@
+@import "../base/variables";
+
+.button-toggle-container {
+  text-align: center;
+
+  .button-toggle {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 0;
+    background-color: $color-primary;
+    color: $color-button-text;
+    border: solid 1px $color-primary;
+    border-radius: 8px;
+    span {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../base/variables";
+
+.list-item-container {
+  .list-item {
+    display: grid;
+    grid-template-columns: auto 2.5em;
+    grid-gap: 0.1em;
+    background-color: $color-secondary;
+    padding: 0.5em;
+  }
+
+  .button {
+    background-color: $color-primary;
+    color: $color-button-text;
+    height: 25px;
+    border-radius: 8px;
+    border: solid 1px $color-primary;
+  }
+
+  hr {
+    color: $color-secondary;
+  }
+}

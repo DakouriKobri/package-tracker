@@ -8,7 +8,7 @@ export default function List({ items, setModal }) {
   }
 
   return (
-    <ul>
+    <ul className="list">
       {items.map((item) => (
         <ListItem key={item.id} item={item} onClick={() => onItem(item)} />
       ))}

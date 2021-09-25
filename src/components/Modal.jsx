@@ -1,4 +1,3 @@
-import "../styles/modal.css";
 // NPM Packages
 import ReactDom from "react-dom";
 
@@ -11,8 +10,8 @@ export default function Modal({ state }) {
     <>
       <div className="modal-background" />
       <div className="modal-window">
-        <button onClick={() => setChild(null)}>Close</button>
         {child}
+        <button onClick={() => setChild(null)}>Close</button>
       </div>
     </>,
     document.getElementById("portal")

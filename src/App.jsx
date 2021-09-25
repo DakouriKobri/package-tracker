@@ -1,10 +1,12 @@
 // NPM Packages
 import { useState, useEffect } from "react";
 
-// Local file
-//import List from "./components/List";
+// Local files
 import ListScreen from "./listScreen";
 import Modal from "./components/Modal";
+import Header from "./components/Header";
+import "./styles/style.scss";
+import Footer from "./components/Footer";
 
 export default function App() {
   const API_URL = `https://my.api.mockaroo.com/insta-orders.json?key=e49e6840`;
@@ -34,13 +36,14 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>My Package Tracker</h1>
+      <Header />
       {isLoading && <p className="loading-message">Loading...</p>}
       {fetchError && <p className="error-message">{`Error: ${fetchError}`}</p>}
       {!fetchError && !isLoading && (
         <ListScreen items={items} setModal={setModal} />
       )}
       <Modal state={[modal, setModal]} />
+      <Footer />
     </div>
   );
 }
