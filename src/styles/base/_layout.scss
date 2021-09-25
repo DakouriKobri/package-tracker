@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.App {
+  font-family: "Roboto", "Oxygen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: c;
+  position: relative;
+}

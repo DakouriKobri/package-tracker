@@ -1,0 +1,13 @@
+@import "../base/variables";
+
+.list-screen {
+  margin-top: 90px;
+  background-color: $color-secondary;
+
+  .welcome-view {
+    margin: 12px 5px;
+    .welcome-view__message {
+      color: $color-text;
+    }
+  }
+}

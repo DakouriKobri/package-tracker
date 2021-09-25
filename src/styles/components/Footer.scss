@@ -1,0 +1,13 @@
+@import "../base/variables";
+
+footer {
+  background-color: $color-primary;
+  text-align: center;
+
+  .copyright {
+    display: inline-block;
+    font-size: x-small;
+    margin-top: 15px;
+    color: #fff;
+  }
+}
