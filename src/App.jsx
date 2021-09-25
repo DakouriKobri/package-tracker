@@ -9,7 +9,7 @@ import "./styles/style.scss";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const API_URL = `https://my.api.mockaroo.com/insta-orders.json?key=e49e6840`;
+  const API_URL = `https://my.api.mockaroo.com/insta-orders.json?key=e49e684`;
 
   const [items, setitems] = useState([]);
   const [fetchError, setFetchError] = useState(null);
